@@ -9,12 +9,13 @@ require "dice"
 describe Dice do 
   it 'can show a number between 1 and 6' do 
   # Arrange
-  number = 5 
-  number_range = (1..6)
-	# Act 
-	show_number(number)
-	# Assert 
-	expect(number_range).to include(number)
+    dice = Dice.new
+    number = 5 
+  
+    # Act 
+    dice.show_number(number)
+    # Assert 
+    expect(number).not_to eq(nil)
   end
 end
 
