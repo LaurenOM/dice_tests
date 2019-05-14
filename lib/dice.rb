@@ -1,7 +1,7 @@
 class Dice 
 	attr_reader :number_of_rolls
 	
-	def initialize 
+	def initialize
 		@number_of_rolls = 3
 	end
 
@@ -11,22 +11,23 @@ class Dice
 	
 	def roll_dice
 		puts "roll dice?"
-		move = gets.chomp
+		number = gets.chomp
+		puts random_number
 	end
 
 	def random_number
 		rand(1..6)
 	end
 
-	def multiple_rolls
+	def roll_die
+		puts "enter number of dice to roll"
 		numbers = []
-		rolls = @number_of_rolls.to_i
-		
-		rolls.times do
+
+		@number_of_rolls.times do
 			numbers << random_number
 		end
-
 		numbers
 	end
 end
+
 
